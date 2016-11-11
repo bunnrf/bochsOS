@@ -1,0 +1,913 @@
+00000000000i[     ] Bochs x86 Emulator 2.6
+00000000000i[     ]   Built from SVN snapshot on September 2nd, 2012
+00000000000i[     ] System configuration
+00000000000i[     ]   processors: 1 (cores=1, HT threads=1)
+00000000000i[     ]   A20 line support: yes
+00000000000i[     ] IPS is set to 10000000
+00000000000i[     ] CPU configuration
+00000000000i[     ]   level: 6
+00000000000i[     ]   SMP support: no
+00000000000i[     ]   APIC support: xapic
+00000000000i[     ]   FPU support: yes
+00000000000i[     ]   MMX support: yes
+00000000000i[     ]   3dnow! support: no
+00000000000i[     ]   SEP support: yes
+00000000000i[     ]   SSE support: sse2
+00000000000i[     ]   XSAVE support: no 
+00000000000i[     ]   AES support: no
+00000000000i[     ]   MOVBE support: no
+00000000000i[     ]   ADX support: no
+00000000000i[     ]   x86-64 support: yes
+00000000000i[     ]   1G paging support: no
+00000000000i[     ]   MWAIT support: yes
+00000000000i[     ]   AVX support: no
+00000000000i[     ]   VMX support: 1
+00000000000i[     ] Optimization configuration
+00000000000i[     ]   RepeatSpeedups support: yes
+00000000000i[     ]   Fast function calls: yes
+00000000000i[     ]   Handlers Chaining speedups: no
+00000000000i[     ] Devices configuration
+00000000000i[     ]   NE2000 support: yes
+00000000000i[     ]   PCI support: yes, enabled=yes
+00000000000i[     ]   SB16 support: yes
+00000000000i[     ]   USB support: yes
+00000000000i[     ]   VGA extension support: vbe cirrus
+00000000000i[MEM0 ] allocated memory at 0x7fa688207010. after alignment, vector=0x7fa688208000
+00000000000i[MEM0 ] 32.00MB
+00000000000i[MEM0 ] mem block size = 0x00100000, blocks=32
+00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('/usr/share/bochs/BIOS-bochs-latest')
+00000000000i[     ] lt_dlhandle is 0x3fa76c0
+00000000000i[PLGIN] loaded plugin libbx_hdimage.so
+00000000000i[     ] lt_dlhandle is 0x3fa8050
+00000000000i[PLGIN] loaded plugin libbx_pci.so
+00000000000i[     ] lt_dlhandle is 0x3fa8bd0
+00000000000i[PLGIN] loaded plugin libbx_pci2isa.so
+00000000000i[     ] lt_dlhandle is 0x3fa95e0
+00000000000i[PLGIN] loaded plugin libbx_acpi.so
+00000000000i[     ] lt_dlhandle is 0x3fa9fe0
+00000000000i[PLGIN] loaded plugin libbx_cmos.so
+00000000000i[     ] lt_dlhandle is 0x3faa920
+00000000000i[PLGIN] loaded plugin libbx_dma.so
+00000000000i[     ] lt_dlhandle is 0x3fab3b0
+00000000000i[PLGIN] loaded plugin libbx_pic.so
+00000000000i[     ] lt_dlhandle is 0x3fabc50
+00000000000i[PLGIN] loaded plugin libbx_pit.so
+00000000000i[     ] lt_dlhandle is 0x3fac680
+00000000000i[PLGIN] loaded plugin libbx_floppy.so
+00000000000i[     ] lt_dlhandle is 0x3fad270
+00000000000i[PLGIN] loaded plugin libbx_vga.so
+00000000000i[     ] lt_dlhandle is 0x3fada00
+00000000000i[PLGIN] loaded plugin libbx_ioapic.so
+00000000000i[     ] lt_dlhandle is 0x3fae440
+00000000000i[PLGIN] loaded plugin libbx_keyboard.so
+00000000000i[     ] lt_dlhandle is 0x3faece0
+00000000000i[PLGIN] loaded plugin libbx_harddrv.so
+00000000000i[     ] lt_dlhandle is 0x3fc0dd0
+00000000000i[PLGIN] loaded plugin libbx_pci_ide.so
+00000000000i[PLGIN] init_dev of 'pci' plugin device by virtual method
+00000000000i[PCI  ] 440FX Host bridge present at device 0, function 0
+00000000000i[PLGIN] init_dev of 'pci2isa' plugin device by virtual method
+00000000000i[PCI  ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
+00000000000i[PLGIN] init_dev of 'cmos' plugin device by virtual method
+00000000000i[CMOS ] Using local time for initial clock
+00000000000i[CMOS ] Setting initial clock to: Thu Nov 10 21:04:45 2016 (time0=1478840685)
+00000000000i[PLGIN] init_dev of 'dma' plugin device by virtual method
+00000000000i[DMA  ] channel 4 used by cascade
+00000000000i[PLGIN] init_dev of 'pic' plugin device by virtual method
+00000000000i[PLGIN] init_dev of 'pit' plugin device by virtual method
+00000000000i[PLGIN] init_dev of 'floppy' plugin device by virtual method
+00000000000i[DMA  ] channel 2 used by Floppy Drive
+00000000000i[FDD  ] fd0: 'floppya.img' ro=0, h=2,t=80,spt=18
+00000000000i[PLGIN] init_dev of 'vga' plugin device by virtual method
+00000000000i[MEM0 ] Register memory access handlers: 0x00000000000a0000 - 0x00000000000bffff
+00000000000i[VGA  ] interval=200000
+00000000000i[MEM0 ] Register memory access handlers: 0x00000000e0000000 - 0x00000000e0ffffff
+00000000000i[BXVGA] VBE Bochs Display Extension Enabled
+00000000000i[XGUI ] test_alloc_colors: 16 colors available out of 16 colors tried
+00000000000i[XGUI ] font 8 wide x 16 high, display depth = 24
+00000000000i[MEM0 ] rom at 0xc0000/41472 ('/usr/share/bochs/VGABIOS-lgpl-latest')
+00000000000i[PLGIN] init_dev of 'acpi' plugin device by virtual method
+00000000000i[PCI  ] ACPI Controller present at device 1, function 3
+00000000000i[PLGIN] init_dev of 'ioapic' plugin device by virtual method
+00000000000i[IOAP ] initializing I/O APIC
+00000000000i[MEM0 ] Register memory access handlers: 0x00000000fec00000 - 0x00000000fec00fff
+00000000000i[PLGIN] init_dev of 'keyboard' plugin device by virtual method
+00000000000i[KBD  ] will paste characters every 1000 keyboard ticks
+00000000000i[PLGIN] init_dev of 'harddrv' plugin device by virtual method
+00000000000i[HD   ] Using boot sequence floppy, none, none
+00000000000i[HD   ] Floppy boot signature check is enabled
+00000000000i[PLGIN] init_dev of 'pci_ide' plugin device by virtual method
+00000000000i[PCI  ] PIIX3 PCI IDE controller present at device 1, function 1
+00000000000i[PLGIN] init_dev of 'unmapped' plugin device by virtual method
+00000000000i[PLGIN] init_dev of 'biosdev' plugin device by virtual method
+00000000000i[PLGIN] init_dev of 'speaker' plugin device by virtual method
+00000000000i[PLGIN] init_dev of 'extfpuirq' plugin device by virtual method
+00000000000i[PLGIN] init_dev of 'parallel' plugin device by virtual method
+00000000000i[PAR  ] parallel port 1 at 0x0378 irq 7
+00000000000i[PLGIN] init_dev of 'serial' plugin device by virtual method
+00000000000i[SER  ] com1 at 0x03f8 irq 4
+00000000000i[PLGIN] init_dev of 'gameport' plugin device by virtual method
+00000000000i[PLGIN] init_dev of 'iodebug' plugin device by virtual method
+00000000000i[PLGIN] register state of 'pci' plugin device by virtual method
+00000000000i[PLGIN] register state of 'pci2isa' plugin device by virtual method
+00000000000i[PLGIN] register state of 'cmos' plugin device by virtual method
+00000000000i[PLGIN] register state of 'dma' plugin device by virtual method
+00000000000i[PLGIN] register state of 'pic' plugin device by virtual method
+00000000000i[PLGIN] register state of 'pit' plugin device by virtual method
+00000000000i[PLGIN] register state of 'floppy' plugin device by virtual method
+00000000000i[PLGIN] register state of 'vga' plugin device by virtual method
+00000000000i[PLGIN] register state of 'unmapped' plugin device by virtual method
+00000000000i[PLGIN] register state of 'biosdev' plugin device by virtual method
+00000000000i[PLGIN] register state of 'speaker' plugin device by virtual method
+00000000000i[PLGIN] register state of 'extfpuirq' plugin device by virtual method
+00000000000i[PLGIN] register state of 'parallel' plugin device by virtual method
+00000000000i[PLGIN] register state of 'serial' plugin device by virtual method
+00000000000i[PLGIN] register state of 'gameport' plugin device by virtual method
+00000000000i[PLGIN] register state of 'iodebug' plugin device by virtual method
+00000000000i[PLGIN] register state of 'acpi' plugin device by virtual method
+00000000000i[PLGIN] register state of 'ioapic' plugin device by virtual method
+00000000000i[PLGIN] register state of 'keyboard' plugin device by virtual method
+00000000000i[PLGIN] register state of 'harddrv' plugin device by virtual method
+00000000000i[PLGIN] register state of 'pci_ide' plugin device by virtual method
+00000000000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+00000000000i[CPU0 ] cpu hardware reset
+00000000000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+00000000000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+00000000000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+00000000000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+00000000000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+00000000000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+00000000000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+00000000000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+00000000000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+00000000000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+00000000000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+00000000000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+00000000000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+00000000000i[PLGIN] reset of 'pci' plugin device by virtual method
+00000000000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+00000000000i[PLGIN] reset of 'cmos' plugin device by virtual method
+00000000000i[PLGIN] reset of 'dma' plugin device by virtual method
+00000000000i[PLGIN] reset of 'pic' plugin device by virtual method
+00000000000i[PLGIN] reset of 'pit' plugin device by virtual method
+00000000000i[PLGIN] reset of 'floppy' plugin device by virtual method
+00000000000i[PLGIN] reset of 'vga' plugin device by virtual method
+00000000000i[PLGIN] reset of 'acpi' plugin device by virtual method
+00000000000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+00000000000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+00000000000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+00000000000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+00000000000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+00000000000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+00000000000i[PLGIN] reset of 'speaker' plugin device by virtual method
+00000000000e[SPEAK] Failed to open /dev/console: Permission denied
+00000000000e[SPEAK] Deactivating beep on console
+00000000000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+00000000000i[PLGIN] reset of 'parallel' plugin device by virtual method
+00000000000i[PLGIN] reset of 'serial' plugin device by virtual method
+00000000000i[PLGIN] reset of 'gameport' plugin device by virtual method
+00000000000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+00000000000i[XGUI ] Mouse capture off
+00000000000i[     ] set SIGINT handler to bx_debug_ctrlc_handler
+00000000000i[XGUI ] Mouse capture off
+00000000025i[MEM0 ] allocate_block: block=0x0 used 0x1 of 0x20
+00000004661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+00000320062i[KBD  ] reset-disable command received
+00000325788i[BIOS ] Starting rombios32
+00000326230i[BIOS ] Shutdown flag 0
+00000326827i[BIOS ] ram_size=0x02000000
+00000327255i[BIOS ] ram_end=32MB
+00000427193i[BIOS ] Found 1 cpu(s)
+00000441374i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+00000769169i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+00001097101i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+00001097125i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+00001097149i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+00001097173i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+00001097183i[P2I  ] write: ELCR2 = 0x0a
+00001097962i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+00001105642i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+00001107921i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+00001110039i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+00001110268i[PIDE ] new BM-DMA address: 0xc000
+00001110888i[BIOS ] region 4: 0x0000c000
+00001112922i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+00001113152i[ACPI ] new irq line = 11
+00001113166i[ACPI ] new irq line = 9
+00001113193i[ACPI ] new PM base address: 0xb000
+00001113207i[ACPI ] new SM base address: 0xb100
+00001113235i[PCI  ] setting SMRAM control register to 0x4a
+00001277329i[CPU0 ] Enter to System Management Mode
+00001277329i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+00001277339i[CPU0 ] RSM: Resuming from System Management Mode
+00001441360i[PCI  ] setting SMRAM control register to 0x0a
+00001456262i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+00001458077i[BIOS ] SMBIOS table addr=0x000fa520
+00001458128i[MEM0 ] allocate_block: block=0x1f used 0x2 of 0x20
+00001461056i[BIOS ] Firmware waking vector 0x1ff00cc
+00001465915i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+00001465952i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+00001466683i[BIOS ] bios_table_cur_addr: 0x000fa664
+00001594301i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+00001594372i[BXVGA] VBE known Display Interface b0c0
+00001594404i[BXVGA] VBE known Display Interface b0c5
+00001597329i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+00002000001i[XGUI ] charmap update. Font Height is 16
+00032315167i[BIOS ] Booting from 0000:7c00
+02381149600i[     ] Ctrl-C detected in signal handler.
+02381149600i[XGUI ] Mouse capture off
+02489081795i[     ] Ctrl-C detected in signal handler.
+02489081795i[XGUI ] Mouse capture off
+02489081795i[XGUI ] Mouse capture off
+02489081795i[XGUI ] Mouse capture off
+02489081795i[XGUI ] Mouse capture off
+02489081795i[XGUI ] Mouse capture off
+02489090000i[XGUI ] system RESET callback
+02489090000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+02489090000i[CPU0 ] cpu hardware reset
+02489090000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+02489090000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+02489090000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+02489090000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+02489090000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+02489090000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+02489090000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+02489090000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+02489090000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+02489090000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+02489090000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+02489090000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+02489090000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+02489090000i[PLGIN] reset of 'pci' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+02489090000i[PLGIN] reset of 'cmos' plugin device by virtual method
+02489090000i[PLGIN] reset of 'dma' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pic' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pit' plugin device by virtual method
+02489090000i[PLGIN] reset of 'floppy' plugin device by virtual method
+02489090000i[PLGIN] reset of 'vga' plugin device by virtual method
+02489090000i[PLGIN] reset of 'acpi' plugin device by virtual method
+02489090000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+02489090000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+02489090000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+02489090000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+02489090000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+02489090000i[PLGIN] reset of 'speaker' plugin device by virtual method
+02489090000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+02489090000i[PLGIN] reset of 'parallel' plugin device by virtual method
+02489090000i[PLGIN] reset of 'serial' plugin device by virtual method
+02489090000i[PLGIN] reset of 'gameport' plugin device by virtual method
+02489090000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+02489090000i[XGUI ] system RESET callback
+02489090000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+02489090000i[CPU0 ] cpu hardware reset
+02489090000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+02489090000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+02489090000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+02489090000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+02489090000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+02489090000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+02489090000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+02489090000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+02489090000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+02489090000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+02489090000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+02489090000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+02489090000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+02489090000i[PLGIN] reset of 'pci' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+02489090000i[PLGIN] reset of 'cmos' plugin device by virtual method
+02489090000i[PLGIN] reset of 'dma' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pic' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pit' plugin device by virtual method
+02489090000i[PLGIN] reset of 'floppy' plugin device by virtual method
+02489090000i[PLGIN] reset of 'vga' plugin device by virtual method
+02489090000i[PLGIN] reset of 'acpi' plugin device by virtual method
+02489090000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+02489090000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+02489090000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+02489090000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+02489090000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+02489090000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+02489090000i[PLGIN] reset of 'speaker' plugin device by virtual method
+02489090000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+02489090000i[PLGIN] reset of 'parallel' plugin device by virtual method
+02489090000i[PLGIN] reset of 'serial' plugin device by virtual method
+02489090000i[PLGIN] reset of 'gameport' plugin device by virtual method
+02489090000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+02489094661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+02489410062i[KBD  ] reset-disable command received
+02489415788i[BIOS ] Starting rombios32
+02489416230i[BIOS ] Shutdown flag 0
+02489416827i[BIOS ] ram_size=0x02000000
+02489417255i[BIOS ] ram_end=32MB
+02489517148i[BIOS ] Found 1 cpu(s)
+02489531329i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+02489859124i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+02490187056i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+02490187080i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+02490187104i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+02490187128i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+02490187138i[P2I  ] write: ELCR2 = 0x0a
+02490187917i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+02490195597i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+02490197876i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+02490199994i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+02490200843i[BIOS ] region 4: 0x0000c000
+02490202877i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+02490203107i[ACPI ] new irq line = 11
+02490203121i[ACPI ] new irq line = 9
+02490203190i[PCI  ] setting SMRAM control register to 0x4a
+02490367284i[CPU0 ] Enter to System Management Mode
+02490367284i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+02490367294i[CPU0 ] RSM: Resuming from System Management Mode
+02490531315i[PCI  ] setting SMRAM control register to 0x0a
+02490546217i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+02490548032i[BIOS ] SMBIOS table addr=0x000fa520
+02490551011i[BIOS ] Firmware waking vector 0x1ff00cc
+02490555870i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+02490555907i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+02490556638i[BIOS ] bios_table_cur_addr: 0x000fa664
+02490684256i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+02490684327i[BXVGA] VBE known Display Interface b0c0
+02490684359i[BXVGA] VBE known Display Interface b0c5
+02490687284i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+02492000006i[XGUI ] charmap update. Font Height is 16
+02521405172i[BIOS ] Booting from 0000:7c00
+03270495639i[BIOS ] KBD: int09h_handler(): scancode & asciicode are zero?
+03324165637i[BIOS ] KBD: int09h_handler(): scancode & asciicode are zero?
+03347915638i[BIOS ] KBD: int09h_handler(): scancode & asciicode are zero?
+03355985641i[BIOS ] KBD: int09h_handler(): scancode & asciicode are zero?
+03573660000i[XGUI ] system RESET callback
+03573660000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+03573660000i[CPU0 ] cpu hardware reset
+03573660000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+03573660000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+03573660000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+03573660000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+03573660000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+03573660000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+03573660000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+03573660000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+03573660000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+03573660000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+03573660000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+03573660000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+03573660000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+03573660000i[PLGIN] reset of 'pci' plugin device by virtual method
+03573660000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+03573660000i[PLGIN] reset of 'cmos' plugin device by virtual method
+03573660000i[PLGIN] reset of 'dma' plugin device by virtual method
+03573660000i[PLGIN] reset of 'pic' plugin device by virtual method
+03573660000i[PLGIN] reset of 'pit' plugin device by virtual method
+03573660000i[PLGIN] reset of 'floppy' plugin device by virtual method
+03573660000i[PLGIN] reset of 'vga' plugin device by virtual method
+03573660000i[PLGIN] reset of 'acpi' plugin device by virtual method
+03573660000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+03573660000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+03573660000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+03573660000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+03573660000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+03573660000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+03573660000i[PLGIN] reset of 'speaker' plugin device by virtual method
+03573660000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+03573660000i[PLGIN] reset of 'parallel' plugin device by virtual method
+03573660000i[PLGIN] reset of 'serial' plugin device by virtual method
+03573660000i[PLGIN] reset of 'gameport' plugin device by virtual method
+03573660000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+03573664661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+03573980062i[KBD  ] reset-disable command received
+03573985788i[BIOS ] Starting rombios32
+03573986230i[BIOS ] Shutdown flag 0
+03573986827i[BIOS ] ram_size=0x02000000
+03573987255i[BIOS ] ram_end=32MB
+03574087193i[BIOS ] Found 1 cpu(s)
+03574101374i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+03574429169i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+03574757101i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+03574757125i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+03574757149i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+03574757173i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+03574757183i[P2I  ] write: ELCR2 = 0x0a
+03574757962i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+03574765642i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+03574767921i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+03574770039i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+03574770888i[BIOS ] region 4: 0x0000c000
+03574772922i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+03574773152i[ACPI ] new irq line = 11
+03574773166i[ACPI ] new irq line = 9
+03574773235i[PCI  ] setting SMRAM control register to 0x4a
+03574937329i[CPU0 ] Enter to System Management Mode
+03574937329i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+03574937339i[CPU0 ] RSM: Resuming from System Management Mode
+03575101360i[PCI  ] setting SMRAM control register to 0x0a
+03575116262i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+03575118077i[BIOS ] SMBIOS table addr=0x000fa520
+03575121056i[BIOS ] Firmware waking vector 0x1ff00cc
+03575125915i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+03575125952i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+03575126683i[BIOS ] bios_table_cur_addr: 0x000fa664
+03575254301i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+03575254372i[BXVGA] VBE known Display Interface b0c0
+03575254404i[BXVGA] VBE known Display Interface b0c5
+03575257329i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+03576000001i[XGUI ] charmap update. Font Height is 16
+03605975167i[BIOS ] Booting from 0000:7c00
+03983660000i[XGUI ] system RESET callback
+03983660000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+03983660000i[CPU0 ] cpu hardware reset
+03983660000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+03983660000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+03983660000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+03983660000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+03983660000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+03983660000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+03983660000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+03983660000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+03983660000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+03983660000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+03983660000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+03983660000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+03983660000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+03983660000i[PLGIN] reset of 'pci' plugin device by virtual method
+03983660000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+03983660000i[PLGIN] reset of 'cmos' plugin device by virtual method
+03983660000i[PLGIN] reset of 'dma' plugin device by virtual method
+03983660000i[PLGIN] reset of 'pic' plugin device by virtual method
+03983660000i[PLGIN] reset of 'pit' plugin device by virtual method
+03983660000i[PLGIN] reset of 'floppy' plugin device by virtual method
+03983660000i[PLGIN] reset of 'vga' plugin device by virtual method
+03983660000i[PLGIN] reset of 'acpi' plugin device by virtual method
+03983660000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+03983660000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+03983660000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+03983660000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+03983660000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+03983660000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+03983660000i[PLGIN] reset of 'speaker' plugin device by virtual method
+03983660000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+03983660000i[PLGIN] reset of 'parallel' plugin device by virtual method
+03983660000i[PLGIN] reset of 'serial' plugin device by virtual method
+03983660000i[PLGIN] reset of 'gameport' plugin device by virtual method
+03983660000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+03983664661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+03984005041i[KBD  ] reset-disable command received
+03984010805i[BIOS ] Starting rombios32
+03984011247i[BIOS ] Shutdown flag 0
+03984011844i[BIOS ] ram_size=0x02000000
+03984012272i[BIOS ] ram_end=32MB
+03984112192i[BIOS ] Found 1 cpu(s)
+03984126373i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+03984454168i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+03984782100i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+03984782124i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+03984782148i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+03984782172i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+03984782182i[P2I  ] write: ELCR2 = 0x0a
+03984782961i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+03984790641i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+03984792920i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+03984795038i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+03984795887i[BIOS ] region 4: 0x0000c000
+03984797921i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+03984798151i[ACPI ] new irq line = 11
+03984798165i[ACPI ] new irq line = 9
+03984798234i[PCI  ] setting SMRAM control register to 0x4a
+03984962328i[CPU0 ] Enter to System Management Mode
+03984962328i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+03984962338i[CPU0 ] RSM: Resuming from System Management Mode
+03985126359i[PCI  ] setting SMRAM control register to 0x0a
+03985141261i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+03985143076i[BIOS ] SMBIOS table addr=0x000fa520
+03985146055i[BIOS ] Firmware waking vector 0x1ff00cc
+03985150914i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+03985150951i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+03985151682i[BIOS ] bios_table_cur_addr: 0x000fa664
+03985279300i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+03985279371i[BXVGA] VBE known Display Interface b0c0
+03985279403i[BXVGA] VBE known Display Interface b0c5
+03985282328i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+03986000000i[XGUI ] charmap update. Font Height is 16
+04015975166i[BIOS ] Booting from 0000:7c00
+04341860000i[XGUI ] system RESET callback
+04341860000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+04341860000i[CPU0 ] cpu hardware reset
+04341860000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+04341860000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+04341860000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+04341860000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+04341860000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+04341860000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+04341860000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+04341860000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+04341860000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+04341860000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+04341860000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+04341860000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+04341860000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+04341860000i[PLGIN] reset of 'pci' plugin device by virtual method
+04341860000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+04341860000i[PLGIN] reset of 'cmos' plugin device by virtual method
+04341860000i[PLGIN] reset of 'dma' plugin device by virtual method
+04341860000i[PLGIN] reset of 'pic' plugin device by virtual method
+04341860000i[PLGIN] reset of 'pit' plugin device by virtual method
+04341860000i[PLGIN] reset of 'floppy' plugin device by virtual method
+04341860000i[PLGIN] reset of 'vga' plugin device by virtual method
+04341860000i[PLGIN] reset of 'acpi' plugin device by virtual method
+04341860000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+04341860000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+04341860000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+04341860000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+04341860000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+04341860000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+04341860000i[PLGIN] reset of 'speaker' plugin device by virtual method
+04341860000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+04341860000i[PLGIN] reset of 'parallel' plugin device by virtual method
+04341860000i[PLGIN] reset of 'serial' plugin device by virtual method
+04341860000i[PLGIN] reset of 'gameport' plugin device by virtual method
+04341860000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+04341864661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+04342180039i[KBD  ] reset-disable command received
+04342185803i[BIOS ] Starting rombios32
+04342186245i[BIOS ] Shutdown flag 0
+04342186842i[BIOS ] ram_size=0x02000000
+04342187270i[BIOS ] ram_end=32MB
+04342287145i[BIOS ] Found 1 cpu(s)
+04342301326i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+04342629121i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+04342957053i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+04342957077i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+04342957101i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+04342957125i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+04342957135i[P2I  ] write: ELCR2 = 0x0a
+04342957914i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+04342965594i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+04342967873i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+04342969991i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+04342970840i[BIOS ] region 4: 0x0000c000
+04342972874i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+04342973104i[ACPI ] new irq line = 11
+04342973118i[ACPI ] new irq line = 9
+04342973187i[PCI  ] setting SMRAM control register to 0x4a
+04343137281i[CPU0 ] Enter to System Management Mode
+04343137281i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+04343137291i[CPU0 ] RSM: Resuming from System Management Mode
+04343301312i[PCI  ] setting SMRAM control register to 0x0a
+04343316214i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+04343318029i[BIOS ] SMBIOS table addr=0x000fa520
+04343321008i[BIOS ] Firmware waking vector 0x1ff00cc
+04343325867i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+04343325904i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+04343326635i[BIOS ] bios_table_cur_addr: 0x000fa664
+04343454253i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+04343454324i[BXVGA] VBE known Display Interface b0c0
+04343454356i[BXVGA] VBE known Display Interface b0c5
+04343457281i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+04344000003i[XGUI ] charmap update. Font Height is 16
+04374175169i[BIOS ] Booting from 0000:7c00
+04640750000i[XGUI ] system RESET callback
+04640750000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+04640750000i[CPU0 ] cpu hardware reset
+04640750000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+04640750000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+04640750000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+04640750000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+04640750000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+04640750000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+04640750000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+04640750000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+04640750000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+04640750000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+04640750000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+04640750000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+04640750000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+04640750000i[PLGIN] reset of 'pci' plugin device by virtual method
+04640750000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+04640750000i[PLGIN] reset of 'cmos' plugin device by virtual method
+04640750000i[PLGIN] reset of 'dma' plugin device by virtual method
+04640750000i[PLGIN] reset of 'pic' plugin device by virtual method
+04640750000i[PLGIN] reset of 'pit' plugin device by virtual method
+04640750000i[PLGIN] reset of 'floppy' plugin device by virtual method
+04640750000i[PLGIN] reset of 'vga' plugin device by virtual method
+04640750000i[PLGIN] reset of 'acpi' plugin device by virtual method
+04640750000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+04640750000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+04640750000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+04640750000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+04640750000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+04640750000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+04640750000i[PLGIN] reset of 'speaker' plugin device by virtual method
+04640750000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+04640750000i[PLGIN] reset of 'parallel' plugin device by virtual method
+04640750000i[PLGIN] reset of 'serial' plugin device by virtual method
+04640750000i[PLGIN] reset of 'gameport' plugin device by virtual method
+04640750000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+04640754661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+04641070039i[KBD  ] reset-disable command received
+04641075803i[BIOS ] Starting rombios32
+04641076245i[BIOS ] Shutdown flag 0
+04641076842i[BIOS ] ram_size=0x02000000
+04641077270i[BIOS ] ram_end=32MB
+04641177145i[BIOS ] Found 1 cpu(s)
+04641191326i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+04641519121i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+04641847053i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+04641847077i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+04641847101i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+04641847125i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+04641847135i[P2I  ] write: ELCR2 = 0x0a
+04641847914i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+04641855594i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+04641857873i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+04641859991i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+04641860840i[BIOS ] region 4: 0x0000c000
+04641862874i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+04641863104i[ACPI ] new irq line = 11
+04641863118i[ACPI ] new irq line = 9
+04641863187i[PCI  ] setting SMRAM control register to 0x4a
+04642027281i[CPU0 ] Enter to System Management Mode
+04642027281i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+04642027291i[CPU0 ] RSM: Resuming from System Management Mode
+04642191312i[PCI  ] setting SMRAM control register to 0x0a
+04642206214i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+04642208029i[BIOS ] SMBIOS table addr=0x000fa520
+04642211008i[BIOS ] Firmware waking vector 0x1ff00cc
+04642215867i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+04642215904i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+04642216635i[BIOS ] bios_table_cur_addr: 0x000fa664
+04642344253i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+04642344324i[BXVGA] VBE known Display Interface b0c0
+04642344356i[BXVGA] VBE known Display Interface b0c5
+04642347281i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+04644000003i[XGUI ] charmap update. Font Height is 16
+04673065169i[BIOS ] Booting from 0000:7c00
+05367050000i[KBD  ] internal keyboard buffer full, ignoring scancode.(02)
+05367160000i[KBD  ] internal keyboard buffer full, ignoring scancode.(03)
+05368180000i[KBD  ] internal keyboard buffer full, ignoring scancode.(82)
+05368240000i[KBD  ] internal keyboard buffer full, ignoring scancode.(05)
+05368320000i[KBD  ] internal keyboard buffer full, ignoring scancode.(83)
+05369030000i[KBD  ] internal keyboard buffer full, ignoring scancode.(85)
+05369730000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1c)
+05370690000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9c)
+05371770000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05372640000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1f)
+05372700000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05372990000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05373070000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9f)
+05373120000i[KBD  ] internal keyboard buffer full, ignoring scancode.(21)
+05373590000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05374050000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05374410000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a1)
+05374550000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05375040000i[KBD  ] internal keyboard buffer full, ignoring scancode.(21)
+05375250000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05375520000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05376050000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05376170000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a1)
+05376640000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05377030000i[KBD  ] internal keyboard buffer full, ignoring scancode.(21)
+05377200000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05377410000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1c)
+05377830000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05378010000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a1)
+05378420000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9c)
+05379890000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05380190000i[KBD  ] internal keyboard buffer full, ignoring scancode.(22)
+05381020000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05381180000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05381370000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a2)
+05382180000i[KBD  ] internal keyboard buffer full, ignoring scancode.(22)
+05382270000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05382700000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1c)
+05382850000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05383260000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a2)
+05383530000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05383830000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9c)
+05384010000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05384110000i[KBD  ] internal keyboard buffer full, ignoring scancode.(22)
+05384440000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05384920000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a2)
+05385000000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05386070000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05386240000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05386340000i[KBD  ] internal keyboard buffer full, ignoring scancode.(22)
+05386960000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05387410000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a2)
+05387690000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05388270000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1c)
+05388930000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05389340000i[KBD  ] internal keyboard buffer full, ignoring scancode.(24)
+05389800000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9c)
+05390740000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a4)
+05390870000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05391480000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05392040000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05392580000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1c)
+05392700000i[KBD  ] internal keyboard buffer full, ignoring scancode.(22)
+05392820000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05393350000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a2)
+05393580000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05393960000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9c)
+05394090000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05394750000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05395030000i[KBD  ] internal keyboard buffer full, ignoring scancode.(21)
+05395210000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05395290000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a1)
+05395550000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05396430000i[KBD  ] internal keyboard buffer full, ignoring scancode.(21)
+05396500000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05396780000i[KBD  ] internal keyboard buffer full, ignoring scancode.(18)
+05396870000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05397020000i[KBD  ] internal keyboard buffer full, ignoring scancode.(24)
+05397100000i[KBD  ] internal keyboard buffer full, ignoring scancode.(17)
+05397310000i[KBD  ] internal keyboard buffer full, ignoring scancode.(98)
+05397470000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05397550000i[KBD  ] internal keyboard buffer full, ignoring scancode.(97)
+05397750000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a1)
+05397810000i[KBD  ] internal keyboard buffer full, ignoring scancode.(1e)
+05398100000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a4)
+05398540000i[KBD  ] internal keyboard buffer full, ignoring scancode.(12)
+05398710000i[KBD  ] internal keyboard buffer full, ignoring scancode.(21)
+05398800000i[KBD  ] internal keyboard buffer full, ignoring scancode.(9e)
+05399410000i[KBD  ] internal keyboard buffer full, ignoring scancode.(92)
+05399590000i[KBD  ] internal keyboard buffer full, ignoring scancode.(a1)
+05407100000i[XGUI ] system RESET callback
+05407100000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+05407100000i[CPU0 ] cpu hardware reset
+05407100000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+05407100000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+05407100000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+05407100000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+05407100000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+05407100000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+05407100000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+05407100000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+05407100000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+05407100000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+05407100000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+05407100000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+05407100000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+05407100000i[PLGIN] reset of 'pci' plugin device by virtual method
+05407100000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+05407100000i[PLGIN] reset of 'cmos' plugin device by virtual method
+05407100000i[PLGIN] reset of 'dma' plugin device by virtual method
+05407100000i[PLGIN] reset of 'pic' plugin device by virtual method
+05407100000i[PLGIN] reset of 'pit' plugin device by virtual method
+05407100000i[PLGIN] reset of 'floppy' plugin device by virtual method
+05407100000i[PLGIN] reset of 'vga' plugin device by virtual method
+05407100000i[PLGIN] reset of 'acpi' plugin device by virtual method
+05407100000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+05407100000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+05407100000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+05407100000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+05407100000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+05407100000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+05407100000i[PLGIN] reset of 'speaker' plugin device by virtual method
+05407100000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+05407100000i[PLGIN] reset of 'parallel' plugin device by virtual method
+05407100000i[PLGIN] reset of 'serial' plugin device by virtual method
+05407100000i[PLGIN] reset of 'gameport' plugin device by virtual method
+05407100000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+05407104661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+05407460065i[KBD  ] reset-disable command received
+05407465791i[BIOS ] Starting rombios32
+05407466233i[BIOS ] Shutdown flag 0
+05407466830i[BIOS ] ram_size=0x02000000
+05407467258i[BIOS ] ram_end=32MB
+05407567196i[BIOS ] Found 1 cpu(s)
+05407581377i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+05407909172i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+05408237104i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+05408237128i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+05408237152i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+05408237176i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+05408237186i[P2I  ] write: ELCR2 = 0x0a
+05408237965i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+05408245645i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+05408247924i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+05408250042i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+05408250891i[BIOS ] region 4: 0x0000c000
+05408252925i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+05408253155i[ACPI ] new irq line = 11
+05408253169i[ACPI ] new irq line = 9
+05408253238i[PCI  ] setting SMRAM control register to 0x4a
+05408417332i[CPU0 ] Enter to System Management Mode
+05408417332i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+05408417342i[CPU0 ] RSM: Resuming from System Management Mode
+05408581363i[PCI  ] setting SMRAM control register to 0x0a
+05408596265i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+05408598080i[BIOS ] SMBIOS table addr=0x000fa520
+05408601059i[BIOS ] Firmware waking vector 0x1ff00cc
+05408605918i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+05408605955i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+05408606686i[BIOS ] bios_table_cur_addr: 0x000fa664
+05408734304i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+05408734375i[BXVGA] VBE known Display Interface b0c0
+05408734407i[BXVGA] VBE known Display Interface b0c5
+05408737332i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+05410000004i[XGUI ] charmap update. Font Height is 16
+05439415170i[BIOS ] Booting from 0000:7c00
+09548450000e[XGUI ] xkeypress(): keysym 1008ff02 unhandled!
+10003750000i[XGUI ] system RESET callback
+10003750000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+10003750000i[CPU0 ] cpu hardware reset
+10003750000i[APIC0] allocate APIC id=0 (MMIO enabled) to 0x00000000fee00000
+10003750000i[CPU0 ] CPUID[0x00000000]: 00000002 756e6547 6c65746e 49656e69
+10003750000i[CPU0 ] CPUID[0x00000001]: 00000633 00010800 00002028 1fcbfbff
+10003750000i[CPU0 ] CPUID[0x00000002]: 00410601 00000000 00000000 00000000
+10003750000i[CPU0 ] CPUID[0x80000000]: 80000008 00000000 00000000 00000000
+10003750000i[CPU0 ] CPUID[0x80000001]: 00000000 00000000 00000101 2a100000
+10003750000i[CPU0 ] CPUID[0x80000002]: 20202020 20202020 20202020 6e492020
+10003750000i[CPU0 ] CPUID[0x80000003]: 286c6574 50202952 69746e65 52286d75
+10003750000i[CPU0 ] CPUID[0x80000004]: 20342029 20555043 20202020 00202020
+10003750000i[CPU0 ] CPUID[0x80000005]: 01ff01ff 01ff01ff 40020140 40020140
+10003750000i[CPU0 ] CPUID[0x80000006]: 00000000 42004200 02008140 00000000
+10003750000i[CPU0 ] CPUID[0x80000007]: 00000000 00000000 00000000 00000000
+10003750000i[CPU0 ] CPUID[0x80000008]: 00003028 00000000 00000000 00000000
+10003750000i[PLGIN] reset of 'pci' plugin device by virtual method
+10003750000i[PLGIN] reset of 'pci2isa' plugin device by virtual method
+10003750000i[PLGIN] reset of 'cmos' plugin device by virtual method
+10003750000i[PLGIN] reset of 'dma' plugin device by virtual method
+10003750000i[PLGIN] reset of 'pic' plugin device by virtual method
+10003750000i[PLGIN] reset of 'pit' plugin device by virtual method
+10003750000i[PLGIN] reset of 'floppy' plugin device by virtual method
+10003750000i[PLGIN] reset of 'vga' plugin device by virtual method
+10003750000i[PLGIN] reset of 'acpi' plugin device by virtual method
+10003750000i[PLGIN] reset of 'ioapic' plugin device by virtual method
+10003750000i[PLGIN] reset of 'keyboard' plugin device by virtual method
+10003750000i[PLGIN] reset of 'harddrv' plugin device by virtual method
+10003750000i[PLGIN] reset of 'pci_ide' plugin device by virtual method
+10003750000i[PLGIN] reset of 'unmapped' plugin device by virtual method
+10003750000i[PLGIN] reset of 'biosdev' plugin device by virtual method
+10003750000i[PLGIN] reset of 'speaker' plugin device by virtual method
+10003750000i[PLGIN] reset of 'extfpuirq' plugin device by virtual method
+10003750000i[PLGIN] reset of 'parallel' plugin device by virtual method
+10003750000i[PLGIN] reset of 'serial' plugin device by virtual method
+10003750000i[PLGIN] reset of 'gameport' plugin device by virtual method
+10003750000i[PLGIN] reset of 'iodebug' plugin device by virtual method
+10003754661i[BIOS ] $Revision: 11318 $ $Date: 2012-08-06 19:59:54 +0200 (Mo, 06. Aug 2012) $
+10004070062i[KBD  ] reset-disable command received
+10004075788i[BIOS ] Starting rombios32
+10004076230i[BIOS ] Shutdown flag 0
+10004076827i[BIOS ] ram_size=0x02000000
+10004077255i[BIOS ] ram_end=32MB
+10004177094i[BIOS ] Found 1 cpu(s)
+10004191275i[BIOS ] bios_table_addr: 0x000fa438 end=0x000fcc00
+10004519070i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+10004847002i[P2I  ] PCI IRQ routing: PIRQA# set to 0x0b
+10004847026i[P2I  ] PCI IRQ routing: PIRQB# set to 0x09
+10004847050i[P2I  ] PCI IRQ routing: PIRQC# set to 0x0b
+10004847074i[P2I  ] PCI IRQ routing: PIRQD# set to 0x09
+10004847084i[P2I  ] write: ELCR2 = 0x0a
+10004847863i[BIOS ] PIIX3/PIIX4 init: elcr=00 0a
+10004855543i[BIOS ] PCI: bus=0 devfn=0x00: vendor_id=0x8086 device_id=0x1237 class=0x0600
+10004857822i[BIOS ] PCI: bus=0 devfn=0x08: vendor_id=0x8086 device_id=0x7000 class=0x0601
+10004859940i[BIOS ] PCI: bus=0 devfn=0x09: vendor_id=0x8086 device_id=0x7010 class=0x0101
+10004860789i[BIOS ] region 4: 0x0000c000
+10004862823i[BIOS ] PCI: bus=0 devfn=0x0b: vendor_id=0x8086 device_id=0x7113 class=0x0680
+10004863053i[ACPI ] new irq line = 11
+10004863067i[ACPI ] new irq line = 9
+10004863136i[PCI  ] setting SMRAM control register to 0x4a
+10005027230i[CPU0 ] Enter to System Management Mode
+10005027230i[CPU0 ] enter_system_management_mode: temporary disable VMX while in SMM mode
+10005027240i[CPU0 ] RSM: Resuming from System Management Mode
+10005191261i[PCI  ] setting SMRAM control register to 0x0a
+10005206163i[BIOS ] MP table addr=0x000fa510 MPC table addr=0x000fa440 size=0xc8
+10005207978i[BIOS ] SMBIOS table addr=0x000fa520
+10005210957i[BIOS ] Firmware waking vector 0x1ff00cc
+10005215816i[BIOS ] ACPI tables: RSDP addr=0x000fa640 ACPI DATA addr=0x01ff0000 size=0x1f22
+10005215853i[PCI  ] 440FX PMC write to PAM register 59 (TLB Flush)
+10005216584i[BIOS ] bios_table_cur_addr: 0x000fa664
+10005344202i[VBIOS] VGABios $Id: vgabios.c,v 1.75 2011/10/15 14:07:21 vruppert Exp $
+10005344273i[BXVGA] VBE known Display Interface b0c0
+10005344305i[BXVGA] VBE known Display Interface b0c5
+10005347230i[VBIOS] VBE Bios $Id: vbe.c,v 1.64 2011/07/19 18:25:05 vruppert Exp $
+10006000002i[XGUI ] charmap update. Font Height is 16
+10036065168i[BIOS ] Booting from 0000:7c00
+45921774152i[     ] Ctrl-C detected in signal handler.
+45921774152i[XGUI ] Mouse capture off
+45921774152i[XGUI ] Mouse capture off
+45921774152i[XGUI ] Mouse capture off
+45921774152i[     ] dbg: Quit
+45921774152i[CPU0 ] CPU is in real mode (active)
+45921774152i[CPU0 ] CS.mode = 16 bit
+45921774152i[CPU0 ] SS.mode = 16 bit
+45921774152i[CPU0 ] EFER   = 0x00000000
+45921774152i[CPU0 ] | EAX=0000001e  EBX=00000000  ECX=00090000  EDX=00000000
+45921774152i[CPU0 ] | ESP=0000ff40  EBP=0000ff5a  ESI=000e06f2  EDI=0000ffac
+45921774152i[CPU0 ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf ZF af PF cf
+45921774152i[CPU0 ] | SEG sltr(index|ti|rpl)     base    limit G D
+45921774152i[CPU0 ] |  CS:f000( 0004| 0|  0) 000f0000 0000ffff 0 0
+45921774152i[CPU0 ] |  DS:0040( 0005| 0|  0) 00000400 0000ffff 0 0
+45921774152i[CPU0 ] |  SS:2000( 0005| 0|  0) 00020000 0000ffff 0 0
+45921774152i[CPU0 ] |  ES:2000( 0005| 0|  0) 00020000 0000ffff 0 0
+45921774152i[CPU0 ] |  FS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
+45921774152i[CPU0 ] |  GS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
+45921774152i[CPU0 ] | EIP=0000e871 (0000e871)
+45921774152i[CPU0 ] | CR0=0x60000010 CR2=0x00000000
+45921774152i[CPU0 ] | CR3=0x00000000 CR4=0x00000000
+45921774152i[CMOS ] Last time is 1478845272 (Thu Nov 10 22:21:12 2016)
+45921774152i[XGUI ] Exit
+45921774152i[CTRL ] quit_sim called with exit code 0
